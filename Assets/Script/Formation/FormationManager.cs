@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Script.Formation
@@ -16,8 +17,13 @@ namespace Script.Formation
         [SerializeField] [Range(2,5)] private int neighbourSideDistance = 2;    // distance between slots in a row
         [SerializeField] [Range(1,3)] private int neighbourLineDistance = 2;    // distance between rows in the formation
 
-       private void Start()
+
+        private List<GameObject> _formationList;
+        public List<GameObject> FormationList => _formationList;
+
+        private void Start()
        {
+           _formationList = new List<GameObject>();
            float lineDistance = neighbourLineDistance;          // distance of each row in relation to the leader
             for (int i = 0; i < formationPrefab.Length; i++)    // formation loop
             {
@@ -37,6 +43,7 @@ namespace Script.Formation
                     temp.GetComponent<Slot>().OffsetPosition = position;                        // set the initial follower's position, so they will always be at the same distance to the leader's position
                     temp.transform.parent = transform;                                          // set the parent of the follower in the screen hierarchy
                     temp.transform.rotation *= Quaternion.AngleAxis( 180, transform.up );  // turn 180º to face the leader
+                    _formationList.Add(temp);
                     sideDistance += neighbourSideDistance;                                      // increase the distance from the initial position
                 }
                 lineDistance += neighbourLineDistance;                                          // increase the distance to the leader of the next row

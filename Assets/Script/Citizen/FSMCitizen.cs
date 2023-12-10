@@ -91,7 +91,7 @@ namespace Script.Citizen
         private FindDestinationState _findDestinationState;
         public FindDestinationState FindDestinationState => _findDestinationState;
 
-        private TargetDestinationState _targetDestinationState;
+        protected TargetDestinationState _targetDestinationState;
         public TargetDestinationState TargetDestinationState => _targetDestinationState;
 
         // Initializes values

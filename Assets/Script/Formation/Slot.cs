@@ -23,19 +23,23 @@ namespace Script.Formation
         }
 
 
-        void Start()
+        private void Start()
         {
             _animator = GetComponent<Animator>();
             _navMeshAgent = gameObject.GetComponent<NavMeshAgent>();
             
         }
 
-        void Update()
+        private void Update()
         {
-            // _navMeshAgent.SetDestination(_target.transform.position + _offsetPosition);  // go to the current position of the leader plus an offset, to keep the same distance from the leader while following them
-            // transform.LookAt(_target.transform);                                         // face the leader
-            // _animator.SetFloat(Constant.Animation.SPEED, _navMeshAgent.speed);           // animate the movement
+            _navMeshAgent.SetDestination(_target.transform.position + _offsetPosition);  // go to the current position of the leader plus an offset, to keep the same distance from the leader while following them
+            transform.LookAt(_target.transform);                                         // face the leader
+            _animator.SetFloat(Constant.Animation.SPEED, _navMeshAgent.speed);           // animate the movement
+        }
 
+        public void Anime(int taichiMovement)
+        {
+            _animator.SetFloat(Constant.Animation.TAICHI, taichiMovement);
         }
     }
 }

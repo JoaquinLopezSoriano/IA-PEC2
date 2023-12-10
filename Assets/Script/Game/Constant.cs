@@ -27,6 +27,8 @@ namespace Script.Game
             public const string SPEED = "Speed";
             public const string WAIT = "Wait";
             public const string LEAVE = "Leave";
+            public const string TAICHI = "Taichi";
+            public const int MAX_TAICHI = 8;
         }
         
         // Collider Tags

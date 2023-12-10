@@ -50,7 +50,7 @@ MonoBehaviour:
     />\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\"
     blackboard=\"target\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
     <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ConditionEvalNode
-    id=\"7\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"MyConditions/IsTargetNear\">\r\n     
+    id=\"7\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"MyConditions/IsTargetNear\">\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"closeDistance\"
     type=\"System.Single\" isBlackboard=\"False\" value=\"15\" />\r\n          <entry
     name=\"targetName\" type=\"System.String\" isBlackboard=\"True\" blackboard=\"targetName\"
@@ -62,7 +62,7 @@ MonoBehaviour:
     <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"True\" blackboard=\"target\" />\r\n        </inputValues>\r\n     
     </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
-    <ConditionEvalNode id=\"5\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"AlwaysTrue\">\r\n     
+    <ConditionEvalNode id=\"5\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"AlwaysTrue\">\r\n     
     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
     <SubbehaviorNode id=\"3\">\r\n      <_guid>de70ca405c9625c45a8c8c5c90bee248</_guid>\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"wanderArea\"

@@ -9,18 +9,18 @@ namespace Script.Monster
     [Help("Periodically attacks the target. This action never ends.")]
     public class AttackOnce : GOAction
     {
-        // Event raised when sun rises or sets.
+        // Event raised when fled citizen is near.
         public static event System.EventHandler OnAttack;
-        // Define the input parameter delay, with the waited game loops between shoots.
+        // Define the input parameter delay, with the waited game loops between attacks.
         [InParam("delay", DefaultValue=30)]
         public int delay;
  
-        // Game loops since the last shoot.
+        // Game loops since the last attack.
         private int elapsed = 0;
         
         ///<value>Input Target Parameter to to check the distance.</value>
         [InParam("target")]
-        [Help("Target to check the distance")]
+        [Help("The target that is close")]
         public GameObject target;
         
         // Initialization method. If not established, we look for the shooting point.
@@ -40,7 +40,7 @@ namespace Script.Monster
                     return TaskStatus.RUNNING;
             }
             
-            // Do the real shoot.
+            // Trigger the attack
             if (OnAttack != null)
                 OnAttack(this, System.EventArgs.Empty);
             return TaskStatus.RUNNING;

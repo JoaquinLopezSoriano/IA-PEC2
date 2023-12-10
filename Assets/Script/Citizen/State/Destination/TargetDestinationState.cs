@@ -11,7 +11,7 @@ namespace Script.Citizen.State.Destination
     public class TargetDestinationState : ICitizenDestinationState
     {
         // FSM reference
-        private readonly FsmCitizen _fsm;
+        protected readonly FsmCitizen _fsm;
         public TargetDestinationState (FsmCitizen fsmCitizen)
         {
             _fsm = fsmCitizen;
@@ -29,7 +29,7 @@ namespace Script.Citizen.State.Destination
         }
         
         // transition to find state
-        public void ToFindDestinationState()
+        public virtual void ToFindDestinationState()
         {
             _fsm.CurrentDestinationState = _fsm.FindDestinationState;
         }
