@@ -14538,8 +14538,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3204223351531040118, guid: c4fe210a43aad3d4e80dfb40d05e1807, type: 3}
+      propertyPath: movementDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204223351531040118, guid: c4fe210a43aad3d4e80dfb40d05e1807, type: 3}
       propertyPath: detectionDistance
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -92058,7 +92062,7 @@ Transform:
   m_GameObject: {fileID: 2068597741}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25, y: 0.5, z: 0.34}
+  m_LocalPosition: {x: -23.12, y: 0.5, z: 0.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
