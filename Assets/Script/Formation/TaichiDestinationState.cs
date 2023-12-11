@@ -43,6 +43,7 @@ namespace Script.Formation
             {
                 go.GetComponent<Slot>().Anime(0);
             }
+            _fsm.CurrentDestinationState = _fsm.FindDestinationState;
             
         }
     }
